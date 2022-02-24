@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <div class="py-16 mx-auto bg-blue-400">
+    <div class="py-8 mx-auto  w-4/5 bg-blue-400">
         @auth
             <p>{{ auth()->user()->name }}</p>
             <a href="/logout">Log Out</a>

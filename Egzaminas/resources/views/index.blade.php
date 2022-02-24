@@ -1,7 +1,7 @@
 @extends('base')
 
 @section('content')
-    <h1 class="text-5xl text-center">Autoservice Experts</h1>
+    <h1 class="text-5xl text-center mt-16">Autoservice Experts</h1>
     <div class="grid grid-cols-3 mt-16 gap-16 w-4/5 mx-auto">
         @foreach ($experts as $expert)
             <div class="mx-auto p-8 my-16 bg-blue-300 w-64">
