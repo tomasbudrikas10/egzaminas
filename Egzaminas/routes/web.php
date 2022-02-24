@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Expert;
+use App\Models\Rating;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,13 @@ use App\Models\Expert;
 Route::get('/', function () {
     $experts = Expert::all();
     return view('index', compact('experts'));
+});
+
+Route::get('/click/{id}', function ($id) {
+    $rating = Rating::where("expert_id", $id)->first();
+    $rating->rating = $rating->rating + 1;
+    $rating->save();
+    return redirect("/");
 });
 
 Route::get('/dashboard', function () {
