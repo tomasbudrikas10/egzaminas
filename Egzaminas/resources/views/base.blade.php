@@ -12,7 +12,7 @@
         <ul class="w-3/5 mx-auto">
             @auth
             <p>{{ auth()->user()->name }}</p>
-            <a href="/logout">Log Out</a>
+            <form action="/logout" method="POST"><input type="submit">Log Out</form>
             @endauth
             @guest
             <a href="/login">Log In</a>
