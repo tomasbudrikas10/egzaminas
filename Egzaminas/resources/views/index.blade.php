@@ -4,7 +4,7 @@
     <h1 class="text-5xl text-center">Autoservice Experts</h1>
     <div class="grid grid-cols-3 gap-2 p-16 mt-16">
         @foreach ($experts as $expert)
-            <div class="mx-auto p-8 m-8">
+            <div class="mx-auto p-8 my-16 bg-blue-300">
                 <p>Rating: {{ $expert->rating->rating }}</p>
                 <a href="/click/{{ $expert->id }}"><p class="text-5xl text-right">♥</p></a>
                 <img src="#" alt="Image goes here." class="h-52 mx-auto">
