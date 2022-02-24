@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string("name");
             $table->string("lastname");
             $table->unsignedBigInteger("specialization_id");
-            $table->string("image");
+            $table->string("image")->nullable();
             $table->unsignedBigInteger("autoservice_id");
             $table->string("city");
             $table->timestamps();
