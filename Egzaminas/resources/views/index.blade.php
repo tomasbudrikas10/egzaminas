@@ -2,9 +2,9 @@
 
 @section('content')
     <h1 class="text-5xl text-center">Autoservice Experts</h1>
-    <div class="grid grid-cols-3 mt-16 gap-16">
+    <div class="grid grid-cols-3 mt-16 gap-16 w-3/5 mx-auto">
         @foreach ($experts as $expert)
-            <div class="mx-auto p-8 my-16 bg-blue-300 w-64">
+            <div class="mx-auto p-8 my-16 bg-blue-300 w-96">
                 <p>Rating: {{ $expert->rating->rating }}</p>
                 <a href="/click/{{ $expert->id }}"><p class="text-5xl text-right">♥</p></a>
                 <img src="#" alt="Image goes here." class="h-52 mx-auto">
