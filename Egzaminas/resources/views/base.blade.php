@@ -8,15 +8,17 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <div class="py-8 mx-auto  w-4/5 bg-blue-400">
-        @auth
+    <div class="py-8 bg-blue-400">
+        <ul class="w-3/5 mx-auto">
+            @auth
             <p>{{ auth()->user()->name }}</p>
             <a href="/logout">Log Out</a>
-        @endauth
-        @guest
+            @endauth
+            @guest
             <a href="/login">Log In</a>
             <a href="/register">Register</a>
-        @endguest 
+            @endguest 
+        </ul>
     </div>
     @yield('content')
 </body>
