@@ -8,6 +8,16 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
+    <div class="py-16 mx-auto bg-blue-400">
+        @auth
+            <p>{{ auth()->user()->name }}</p>
+            <a href="/logout">Log Out</a>
+        @endauth
+        @guest
+            <a href="/login">Log In</a>
+            <a href="/register">Register</a>
+        @endguest 
+    </div>
     @yield('content')
 </body>
 </html>
