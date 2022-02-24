@@ -7,6 +7,7 @@ use Illuminate\Database\Seeder;
 use App\Models\Autoservice;
 use App\Models\Specialization;
 use App\Models\Expert;
+use App\Models\Rating;
 
 class DatabaseSeeder extends Seeder
 {
@@ -39,6 +40,17 @@ class DatabaseSeeder extends Seeder
         Expert::create(['name' => 'Kasparas', 'lastname' => 'Kasparauskas', 'specialization_id' => '4', 'autoservice_id' => '2', 'city' => 'Telšiai']);
         Expert::create(['name' => 'Deividas', 'lastname' => 'Deividauskas', 'specialization_id' => '5', 'autoservice_id' => '1', 'city' => 'Plungė']);
         Expert::create(['name' => 'Ignas', 'lastname' => 'Ignauskas', 'specialization_id' => '1', 'autoservice_id' => '5', 'city' => 'Ignalina']);
+        
+        Rating::create(['expert_id' => "1", "rating" => "3"]);
+        Rating::create(['expert_id' => "2", "rating" => "5"]);
+        Rating::create(['expert_id' => "3", "rating" => "12"]);
+        Rating::create(['expert_id' => "4", "rating" => "3"]);
+        Rating::create(['expert_id' => "5", "rating" => "2"]);
+        Rating::create(['expert_id' => "6", "rating" => "0"]);
+        Rating::create(['expert_id' => "7", "rating" => "9"]);
+        Rating::create(['expert_id' => "8", "rating" => "1000"]);
+        Rating::create(['expert_id' => "9", "rating" => "2"]);
+        Rating::create(['expert_id' => "10", "rating" => "3"]);
 
 
     }
