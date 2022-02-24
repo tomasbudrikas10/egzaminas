@@ -10,11 +10,11 @@ use App\Models\Specialization;
 class Expert extends Model
 {
     public function autoservice() {
-        return $this->hasOne(Autoservice::class, 'autoservice_id');
+        return $this->hasOne(Autoservice::class, 'id', 'autoservice_id');
     }
 
     public function specialization() {
-        return $this->hasOne(Specialization::class, 'specialization_id');
+        return $this->hasOne(Specialization::class, 'id', 'specialization_id');
     }
 
     use HasFactory;
