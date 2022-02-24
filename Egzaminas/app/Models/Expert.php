@@ -19,7 +19,7 @@ class Expert extends Model
     }
 
     public function rating() {
-        return $this->hasOne(Rating::class, 'rating_id', 'id');
+        return $this->hasOne(Rating::class, 'id', 'rating_id');
     }
 
     use HasFactory;
